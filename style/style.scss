@@ -55,13 +55,26 @@ html {
           height: 325px;
           padding: 20px;
           background-color: rgb(241, 240, 240);
+          &.worng-1 .the-draw {display: block !important;}
+          &.worng-2 .the-stand {display: block !important;}
+          &.worng-3 .the-hang {display: block !important;}
+          &.worng-4  .the-rope{display: block !important;}
+          &.worng-5 .the-man{display: block !important;}
+          &.worng-6 .head {display: block !important;}
+          &.worng-7 .body {display: block !important;}
+          &.worng-8 .hand {display: block !important;}
+          &.worng-9 .legs {display: block !important;}
+         
           .the-draw{
             position: relative;
             width: 60px;
             height: 280px;
-            border-bottom: $brder-size solid $border-color ;           
+            border-bottom: $brder-size solid $border-color ;         
             // margin: auto;
+            display: none;  
+            }
             .the-stand{
+            display: none;  
               content: " ";
               position:absolute;
               width: $brder-size;
@@ -70,7 +83,9 @@ html {
               left: 50%;
               margin-left: -2px;
             }
-            .the-hang{
+           .the-hang{
+             display: none;  
+
               &::before{
                 content: "";
                 position: absolute;
@@ -92,7 +107,7 @@ html {
               }
             }
             .the-rope{
-             
+             display: none;
               position: absolute;
               width: 60px;
               height: 60px;
@@ -103,8 +118,8 @@ html {
             }
             .the-man{
               .head{
+                display: none;
                 position: absolute;
-
                 width: 40px;
                 height: 40px;
                 top: 50px;
@@ -113,6 +128,7 @@ html {
                 border-radius: 50%; 
               }
               .body{
+                display: none;
                 position: absolute;
                 width: 10px;
                 height: 120px;
@@ -122,6 +138,7 @@ html {
                 left: 95px;
               }
               .hand{
+                display: none;
               &::before{
                 content: " ";
                 position:absolute;
@@ -144,6 +161,7 @@ html {
               }
               }  
                .legs{
+                display: none;
                 &::before{
                   content: " ";
                   position:absolute;
@@ -166,12 +184,19 @@ html {
                 }          
             }
         }
+        
+       
     }
     hr{
       border: .5px solid #3e3e3e;
     }
-  
+    .finished{
+      pointer-events: none;
+    }
  }
+
+
+
  .litters{
   flex: 1;
   padding: 15px;
@@ -228,4 +253,15 @@ html {
       }
     }
   }
+.popup{
+  position: fixed;
+  top: 15%;
+  background: linear-gradient(110deg, rgb(255 0 102 / 86%), #ffed4b 60%);
+  padding: 150px 20px;
+  width: 64%;
+  left: 18%;
+  height: 373px;
+  font-size: 40px;
+  border: 1px solid #ccc;
+  color: white;
 }
